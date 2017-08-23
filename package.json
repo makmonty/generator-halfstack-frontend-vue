@@ -1,0 +1,25 @@
+{
+  "name": "generator-halfstack-frontend-vue",
+  "version": "0.0.1",
+  "description": "Vue + Webpack generator",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "vue",
+    "webpack",
+    "yeoman-generator"
+  ],
+  "author": "makmonty",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^3.10.0",
+    "yeoman-generator": "^1.1.1"
+  }
+}
