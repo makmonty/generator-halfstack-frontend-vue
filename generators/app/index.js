@@ -1,7 +1,9 @@
 var Generator = require('yeoman-generator');
 var extend = require('extend');
+var slug = require('slug');
 
 module.exports = class extends Generator {
+
   constructor(args, opts) {
     // Calling the super constructor is important so our generator is correctly set up
     super(args, opts);
@@ -53,12 +55,14 @@ module.exports = class extends Generator {
       }])
       .then((answers) => {
         extend(this.answers, answers);
+        this.answers.appSlug = slug(this.answers.appName).toLowerCase();
       });
   }
 
   writing() {
     let promises = [];
 
+    // Copy common files
     promises.push(this.fs.copyTpl(
       this.templatePath('src/*'),
       this.destinationPath('src'),
@@ -80,6 +84,7 @@ module.exports = class extends Generator {
       this.answers
     ));
 
+    // Files that should exist only if useApi
     if (this.answers.useApi) {
       promises.push(this.fs.copyTpl(
         this.templatePath('src/services/**/!(me.js)'),
@@ -88,9 +93,10 @@ module.exports = class extends Generator {
       ));
     }
 
+    // Files that should exist only if userSystem
     if (this.answers.userSystem) {
       promises.push(this.fs.copyTpl(
-        this.templatePath('src/services/me.js'),
+        this.templatePath('src/services/me.*'),
         this.destinationPath('src/services'),
         this.answers
       ));
