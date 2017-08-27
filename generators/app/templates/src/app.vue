@@ -39,7 +39,7 @@ import 'vue-awesome/icons';
 import FAComponent from 'vue-awesome/components/Icon.vue';
 import BootstrapVue from 'bootstrap-vue';
 
-import config from '@/config';
+import routes from '@/config/routes';
 <% if (userSystem) { %>
 import store from '@/store';
 <% } %>
@@ -51,7 +51,7 @@ Vue.component('icon', FAComponent);
 
 export default {
   el: '#app',
-  router: new VueRouter(config.routes)<% if (userSystem) { %>,
+  router: new VueRouter(routes)<% if (userSystem) { %>,
   store: new Vuex.Store(store)<% } %>
 };
 </script>

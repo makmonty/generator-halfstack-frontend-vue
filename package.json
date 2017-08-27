@@ -1,6 +1,6 @@
 {
   "name": "generator-halfstack-frontend-vue",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Vue + Webpack generator",
   "files": [
     "generators"

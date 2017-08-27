@@ -21,14 +21,14 @@
 
         <b-button type="submit" variant="primary">Login</b-button>
         <b-button @click="signUp" variant="default">Sign up</b-button>
+
+        <b-alert variant="danger"
+          dismissible
+          :show="!!error">
+          {{error}}
+        </b-alert>
       </b-form>
     </div>
-
-    <b-alert variant="danger"
-      dismissible
-      :show="!!error">
-      {{error}}
-    </b-alert>
   </div>
 </template>
 
@@ -68,7 +68,7 @@ export default {
         })
         .catch((err) => {
           if (err.response.status === 409) {
-            // TODO
+            this.error = 'User already exists';
           }
         });
     }

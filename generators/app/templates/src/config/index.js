@@ -1,7 +1,4 @@
-import routes from './routes';
-
-export default {
-  routes<% if (useApi) { %>,
+export default {<% if (useApi) { %>,
   backendBaseUrl: '<%= backendBaseUrl %>',
   apiPath: '<%= apiPath %>'<% } %>
 };
