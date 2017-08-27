@@ -2,16 +2,20 @@
   "name": "generator-halfstack-frontend-vue",
   "version": "1.0.0",
   "description": "Vue + Webpack generator",
-  "files": [
-    "generators"
-  ],
+  "homepage": "https://github.com/makmonty/generator-halfstack-frontend-vue",
+  "author": {
+    "name": "makmonty",
+    "url": "https://github.com/makmonty"
+  },
+  "license": "ISC",
   "keywords": [
     "vue",
     "webpack",
     "yeoman-generator"
   ],
-  "author": "makmonty",
-  "license": "ISC",
+  "files": [
+    "generators"
+  ],
   "dependencies": {
     "eslint": "^4.3.0",
     "eslint-config-google": "^0.9.1",
