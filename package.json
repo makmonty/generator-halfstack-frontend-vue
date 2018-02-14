@@ -2,6 +2,10 @@
   "name": "generator-halfstack-frontend-vue",
   "version": "1.0.1",
   "description": "Vue + Webpack generator",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:makmonty/generator-halfstack-frontend-vue.git"
+  },
   "homepage": "https://github.com/makmonty/generator-halfstack-frontend-vue",
   "author": {
     "name": "makmonty",
