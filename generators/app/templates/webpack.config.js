@@ -15,6 +15,7 @@ module.exports = {
     publicPath: '/',
     filename: 'app.js'
   },
+  mode: PROD ? 'production' : 'development',
   stats: 'minimal',
   devtool: 'cheap-module-source-map',
   devServer: {
@@ -38,6 +39,12 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      }, {
+        test: /\.css$/,
+        use: ['css-loader']
+      }, {
+        test: /\.s[ac]ss$/,
+        use: ['css-loader', 'sass-loader']
       }
     ]
   },
